@@ -2,6 +2,7 @@ package com.example.smartchef.activities;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -55,14 +56,14 @@ public class CookingModeActivity extends AppCompatActivity {
         btnPrev.setOnClickListener(v -> {
             if (currentStepIndex > 0) {
                 currentStepIndex--;
-                displayStep(currentStepIndex);
+                displayStep(currentStepIndex, false);
             }
         });
 
         btnNext.setOnClickListener(v -> {
             if (currentStepIndex < steps.size() - 1) {
                 currentStepIndex++;
-                displayStep(currentStepIndex);
+                displayStep(currentStepIndex, true);
             } else {
                 Toast.makeText(this, "Congratulations! You completed cooking " + recipe.getTitle() + "! 🎉", Toast.LENGTH_LONG).show();
                 finish();
@@ -70,6 +71,7 @@ public class CookingModeActivity extends AppCompatActivity {
         });
 
         btnTimerToggle.setOnClickListener(v -> {
+            btnTimerToggle.startAnimation(AnimationUtils.loadAnimation(this, R.anim.bounce));
             if (isTimerRunning) {
                 pauseTimer();
             } else {
@@ -77,14 +79,17 @@ public class CookingModeActivity extends AppCompatActivity {
             }
         });
 
-        displayStep(currentStepIndex);
+        displayStep(currentStepIndex, true);
     }
 
-    private void displayStep(int index) {
+    private void displayStep(int index, boolean isNext) {
         if (steps == null || index < 0 || index >= steps.size()) return;
 
         InstructionStep step = steps.get(index);
         tvStepCounter.setText("STEP " + (index + 1) + " / " + steps.size());
+        
+        // Slide & Fade Animation for instruction text
+        tvInstruction.startAnimation(AnimationUtils.loadAnimation(this, isNext ? R.anim.slide_in_right : R.anim.fade_in));
         tvInstruction.setText(step.getText());
 
         btnPrev.setEnabled(index > 0);

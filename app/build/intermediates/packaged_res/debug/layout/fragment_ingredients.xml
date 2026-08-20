@@ -109,6 +109,7 @@
 
             <!-- Kitchen Basket SVG Graphic -->
             <ImageView
+                android:id="@+id/iv_basket_icon"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
                 android:src="@drawable/ic_kitchen_basket"

@@ -2,7 +2,6 @@ package com.example.smartchef.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,7 +13,6 @@ import com.example.smartchef.adapters.RecipeAdapter;
 import com.example.smartchef.models.Recipe;
 import com.example.smartchef.utils.Constants;
 import com.example.smartchef.utils.MockData;
-import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
 
 import java.util.ArrayList;
@@ -53,13 +51,25 @@ public class RecipeResultsActivity extends AppCompatActivity {
                 if (i < selectedIngs.size() - 1) sb.append(", ");
             }
             tvSummary.setText(sb.toString());
+            // Dynamically calculate match percentage & sort by highest match!
+            originalRecipes = MockData.matchRecipesByIngredients(selectedIngs);
         } else if (cuisineFilter != null) {
             tvSummary.setText("Explore " + cuisineFilter + " Cuisine");
+            originalRecipes = MockData.getPopularRecipes();
+            List<Recipe> filteredByCuisine = new ArrayList<>();
+            for (Recipe r : originalRecipes) {
+                if (r.getCuisine().equalsIgnoreCase(cuisineFilter)) {
+                    filteredByCuisine.add(r);
+                }
+            }
+            if (!filteredByCuisine.isEmpty()) {
+                originalRecipes = filteredByCuisine;
+            }
         } else {
             tvSummary.setText("Discovered Recipes");
+            originalRecipes = MockData.getPopularRecipes();
         }
 
-        originalRecipes = MockData.getPopularRecipes();
         displayedRecipes.addAll(originalRecipes);
 
         adapter = new RecipeAdapter(this, displayedRecipes, new RecipeAdapter.OnRecipeClickListener() {
@@ -94,13 +104,13 @@ public class RecipeResultsActivity extends AppCompatActivity {
                 }
             } else if (id == R.id.filter_veg) {
                 for (Recipe r : originalRecipes) {
-                    if ("Italian".equalsIgnoreCase(r.getCuisine()) || r.getTitle().toLowerCase().contains("pasta") || r.getTitle().toLowerCase().contains("pizza")) {
+                    if ("Healthy".equalsIgnoreCase(r.getCuisine()) || "Italian".equalsIgnoreCase(r.getCuisine()) || r.getTitle().toLowerCase().contains("paneer") || r.getTitle().toLowerCase().contains("pasta") || r.getTitle().toLowerCase().contains("potato")) {
                         displayedRecipes.add(r);
                     }
                 }
             } else if (id == R.id.filter_high_protein) {
                 for (Recipe r : originalRecipes) {
-                    if (r.getProteinGrams() >= 25) displayedRecipes.add(r);
+                    if (r.getProteinGrams() >= 20) displayedRecipes.add(r);
                 }
             } else {
                 displayedRecipes.addAll(originalRecipes);

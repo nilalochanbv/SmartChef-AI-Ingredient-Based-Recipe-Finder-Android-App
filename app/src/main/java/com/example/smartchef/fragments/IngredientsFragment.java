@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +32,7 @@ public class IngredientsFragment extends Fragment {
 
     private ChipGroup cgVegetables, cgProtein, cgGrains;
     private TextView tvBasketHeader;
+    private ImageView ivBasketIcon;
     private RecyclerView rvBasketItems;
     private MaterialButton btnFindRecipes;
 
@@ -48,6 +51,8 @@ public class IngredientsFragment extends Fragment {
         rvBasketItems = view.findViewById(R.id.rv_basket_items);
         btnFindRecipes = view.findViewById(R.id.btn_find_recipes);
 
+        ivBasketIcon = view.findViewById(R.id.iv_basket_icon);
+
         setupBasketRecyclerView();
         populateCategorizedChips();
         setupCtaButton();
@@ -59,7 +64,7 @@ public class IngredientsFragment extends Fragment {
         basketAdapter = new BasketAdapter(getContext(), selectedBasketIngredients, ingredient -> {
             ingredient.setSelected(false);
             selectedBasketIngredients.remove(ingredient);
-            updateBasketState();
+            updateBasketState(true);
             refreshChipStates();
         });
         rvBasketItems.setAdapter(basketAdapter);
@@ -78,6 +83,10 @@ public class IngredientsFragment extends Fragment {
 
             chip.setOnCheckedChangeListener((buttonView, isChecked) -> {
                 ing.setSelected(isChecked);
+
+                // Chip pop animation
+                chip.startAnimation(AnimationUtils.loadAnimation(requireContext(), R.anim.bounce));
+
                 if (isChecked) {
                     chip.setChipBackgroundColorResource(R.color.primary_orange);
                     chip.setTextColor(getResources().getColor(R.color.white, null));
@@ -89,7 +98,7 @@ public class IngredientsFragment extends Fragment {
                     chip.setTextColor(getResources().getColor(R.color.text_primary, null));
                     selectedBasketIngredients.remove(ing);
                 }
-                updateBasketState();
+                updateBasketState(isChecked);
             });
 
             if ("Vegetables".equalsIgnoreCase(ing.getCategory())) {
@@ -102,14 +111,22 @@ public class IngredientsFragment extends Fragment {
         }
     }
 
-    private void updateBasketState() {
+    private void updateBasketState(boolean animate) {
         int count = selectedBasketIngredients.size();
         tvBasketHeader.setText("Kitchen Basket (" + count + " item" + (count == 1 ? "" : "s") + ")");
         basketAdapter.notifyDataSetChanged();
+
+        if (animate && ivBasketIcon != null) {
+            // Catchy Basket Icon Wobble & Bounce animation
+            ivBasketIcon.animate().scaleX(1.25f).scaleY(1.25f).rotation(12f).setDuration(120).withEndAction(() -> {
+                ivBasketIcon.animate().scaleX(1.0f).scaleY(1.0f).rotation(0f).setDuration(120).start();
+            }).start();
+
+            btnFindRecipes.startAnimation(AnimationUtils.loadAnimation(requireContext(), R.anim.bounce));
+        }
     }
 
     private void refreshChipStates() {
-        // Uncheck chips in chip groups if item was removed from basket
         uncheckMatchingChips(cgVegetables);
         uncheckMatchingChips(cgProtein);
         uncheckMatchingChips(cgGrains);
@@ -117,10 +134,7 @@ public class IngredientsFragment extends Fragment {
 
     private void uncheckMatchingChips(ChipGroup group) {
         for (int i = 0; i < group.getChildCount(); i++) {
-            View view = group.getChildAt(i);
-            if (!(view instanceof Chip)) continue;
-            
-            Chip chip = (Chip) view;
+            Chip chip = (Chip) group.getChildAt(i);
             boolean inBasket = false;
             for (Ingredient ing : selectedBasketIngredients) {
                 if (ing.getName().equalsIgnoreCase(chip.getText().toString())) {
@@ -140,6 +154,8 @@ public class IngredientsFragment extends Fragment {
                 Toast.makeText(getContext(), "Please select at least one ingredient!", Toast.LENGTH_SHORT).show();
                 return;
             }
+
+            v.startAnimation(AnimationUtils.loadAnimation(requireContext(), R.anim.bounce));
 
             Intent intent = new Intent(getContext(), RecipeResultsActivity.class);
             ArrayList<String> ingNames = new ArrayList<>();

@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -29,6 +31,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
     private List<Recipe> recipes;
     private final OnRecipeClickListener listener;
     private final FavoritesManager favoritesManager;
+    private int lastPosition = -1;
 
     public RecipeAdapter(Context context, List<Recipe> recipes, OnRecipeClickListener listener) {
         this.context = context;
@@ -39,6 +42,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
 
     public void updateList(List<Recipe> newList) {
         this.recipes = newList;
+        this.lastPosition = -1;
         notifyDataSetChanged();
     }
 
@@ -60,7 +64,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
         holder.tvMatchPercentage.setText(recipe.getMatchPercentage() + "% Match");
         
         int totalIng = recipe.getIngredients() != null ? recipe.getIngredients().size() : 6;
-        int missingCount = recipe.getMissingIngredients() != null ? recipe.getMissingIngredients().size() : 1;
+        int missingCount = recipe.getMissingIngredients() != null ? recipe.getMissingIngredients().size() : 0;
         int haveCount = Math.max(0, totalIng - missingCount);
         
         holder.tvIngredientsSummary.setText("You have " + haveCount + " of " + totalIng + " ingredients");
@@ -72,8 +76,6 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
             holder.tvMissingIngredient.setVisibility(View.GONE);
         }
 
-        // TODO: Move database check out of onBindViewHolder to avoid blocking the main thread.
-        // Consider pre-fetching favorite IDs or using a Flow/LiveData.
         boolean isFav = favoritesManager.isFavorite(recipe.getId());
         recipe.setFavorite(isFav);
         holder.btnFavorite.setImageResource(isFav ? R.drawable.ic_heart_filled : R.drawable.ic_heart_outline);
@@ -83,13 +85,24 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
                 .placeholder(R.drawable.bg_pill_indicator)
                 .into(holder.ivImage);
 
+        // Slide up animation on initial scroll
+        if (position > lastPosition) {
+            Animation animation = AnimationUtils.loadAnimation(context, R.anim.slide_up);
+            holder.itemView.startAnimation(animation);
+            lastPosition = position;
+        }
+
         View.OnClickListener clickListener = v -> {
-            if (listener != null) listener.onRecipeClick(recipe);
+            v.animate().scaleX(0.97f).scaleY(0.97f).setDuration(80).withEndAction(() -> {
+                v.animate().scaleX(1.0f).scaleY(1.0f).setDuration(80).start();
+                if (listener != null) listener.onRecipeClick(recipe);
+            }).start();
         };
         holder.itemView.setOnClickListener(clickListener);
         holder.btnViewRecipe.setOnClickListener(clickListener);
 
         holder.btnFavorite.setOnClickListener(v -> {
+            holder.btnFavorite.startAnimation(AnimationUtils.loadAnimation(context, R.anim.bounce));
             boolean newFav = favoritesManager.toggleFavorite(recipe);
             holder.btnFavorite.setImageResource(newFav ? R.drawable.ic_heart_filled : R.drawable.ic_heart_outline);
             if (listener != null) listener.onFavoriteClick(recipe);
