@@ -1,0 +1,6 @@
+com.example.smartchef.test.app-annotation-experimental-1.3.0-0 C:\Users\Nilalochan BV\.gradle\caches\transforms-3\002f368096e5e707e4667cca38377906\transformed\annotation-experimental-1.3.0\res
+com.example.smartchef.test.app-core-1.5.0-1 C:\Users\Nilalochan BV\.gradle\caches\transforms-3\42d862d77ef2a5f5fe619cc051bcc496\transformed\core-1.5.0\res
+com.example.smartchef.test.app-androidTest-2 D:\Projects_Main\SmartChef_AI\app\build\generated\res\resValues\androidTest\debug
+com.example.smartchef.test.app-mergeDebugAndroidTestResources-3 D:\Projects_Main\SmartChef_AI\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.smartchef.test.app-mergeDebugAndroidTestResources-4 D:\Projects_Main\SmartChef_AI\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.smartchef.test.app-merged_res-5 D:\Projects_Main\SmartChef_AI\app\build\intermediates\merged_res\debugAndroidTest

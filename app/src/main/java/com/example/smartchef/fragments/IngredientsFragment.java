@@ -117,7 +117,10 @@ public class IngredientsFragment extends Fragment {
 
     private void uncheckMatchingChips(ChipGroup group) {
         for (int i = 0; i < group.getChildCount(); i++) {
-            Chip chip = (Chip) group.getChildAt(i);
+            View view = group.getChildAt(i);
+            if (!(view instanceof Chip)) continue;
+            
+            Chip chip = (Chip) view;
             boolean inBasket = false;
             for (Ingredient ing : selectedBasketIngredients) {
                 if (ing.getName().equalsIgnoreCase(chip.getText().toString())) {

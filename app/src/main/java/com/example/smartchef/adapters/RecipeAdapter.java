@@ -72,6 +72,8 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
             holder.tvMissingIngredient.setVisibility(View.GONE);
         }
 
+        // TODO: Move database check out of onBindViewHolder to avoid blocking the main thread.
+        // Consider pre-fetching favorite IDs or using a Flow/LiveData.
         boolean isFav = favoritesManager.isFavorite(recipe.getId());
         recipe.setFavorite(isFav);
         holder.btnFavorite.setImageResource(isFav ? R.drawable.ic_heart_filled : R.drawable.ic_heart_outline);

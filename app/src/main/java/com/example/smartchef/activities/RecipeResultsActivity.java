@@ -86,7 +86,7 @@ public class RecipeResultsActivity extends AppCompatActivity {
             displayedRecipes.clear();
             if (id == R.id.filter_under_20) {
                 for (Recipe r : originalRecipes) {
-                    if (r.getCookingTimeMinutes() <= 25) displayedRecipes.add(r);
+                    if (r.getCookingTimeMinutes() <= 20) displayedRecipes.add(r);
                 }
             } else if (id == R.id.filter_easy) {
                 for (Recipe r : originalRecipes) {

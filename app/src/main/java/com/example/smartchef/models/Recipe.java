@@ -1,24 +1,44 @@
 package com.example.smartchef.models;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Recipe implements Serializable {
+    @SerializedName("id")
     private String id;
+    
+    @SerializedName("title")
     private String title;
+    
+    @SerializedName("image")
     private String imageUrl;
+    
+    @SerializedName("spoonacularScore")
     private double rating;
+    
+    @SerializedName("readyInMinutes")
     private int cookingTimeMinutes;
+    
+    @SerializedName("servings")
     private int servings;
+    
     private String difficulty;
     private int matchPercentage;
     private boolean isFavorite;
     private String category;
     private String cuisine;
+    
+    @SerializedName("extendedIngredients")
     private List<Ingredient> ingredients;
+    
     private List<String> missingIngredients;
+    
+    @SerializedName("analyzedInstructions")
     private List<InstructionStep> instructionSteps;
+    
     private int calories;
     private int proteinGrams;
     private int carbsGrams;

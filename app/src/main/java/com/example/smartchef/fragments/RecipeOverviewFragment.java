@@ -39,10 +39,10 @@ public class RecipeOverviewFragment extends Fragment {
             Recipe recipe = (Recipe) getArguments().getSerializable(Constants.EXTRA_RECIPE);
             if (recipe != null) {
                 tvDesc.setText(recipe.getDescription());
-                tvCalories.setText(String.valueOf(recipe.getCalories()));
-                tvProtein.setText(recipe.getProteinGrams() + "g");
-                tvCarbs.setText(recipe.getCarbsGrams() + "g");
-                tvFats.setText(recipe.getFatsGrams() + "g");
+                tvCalories.setText(recipe.getCalories() + " kcal");
+                tvProtein.setText(recipe.getProteinGrams() + " g");
+                tvCarbs.setText(recipe.getCarbsGrams() + " g");
+                tvFats.setText(recipe.getFatsGrams() + " g");
             }
         }
 
