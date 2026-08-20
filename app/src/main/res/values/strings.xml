@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SmartChef AI</string>
+    <string name="tagline">Cook smarter with what you already have</string>
+    
+    <!-- Home Screen -->
+    <string name="greeting_evening">Good Evening 👋</string>
+    <string name="greeting_morning">Good Morning 👋</string>
+    <string name="greeting_afternoon">Good Afternoon 👋</string>
+    <string name="what_to_cook">What do you want to cook today?</string>
+    <string name="search_placeholder">Search recipes or ingredients...</string>
+    <string name="section_quick_ingredients">Quick Ingredients</string>
+    <string name="section_popular_recipes">Popular Recipes</string>
+    <string name="section_explore_cuisines">Explore Cuisines</string>
+    <string name="see_all">See All</string>
+    
+    <!-- Ingredient Finder Screen -->
+    <string name="kitchen_title">What\'s in your kitchen?</string>
+    <string name="kitchen_subtitle">Select ingredients and discover recipes.</string>
+    <string name="cat_vegetables">Vegetables</string>
+    <string name="cat_protein">Protein</string>
+    <string name="cat_grains">Grains &amp; Essentials</string>
+    <string name="kitchen_basket_empty">Tap ingredients above to add them to your kitchen basket!</string>
+    <string name="btn_find_recipes">✨ Find Recipes</string>
+    
+    <!-- Recipe Results -->
+    <string name="recipes_for_you">Recipes for you</string>
+    <string name="filter_all">All</string>
+    <string name="filter_under_20">Under 20 mins</string>
+    <string name="filter_easy">Easy</string>
+    <string name="filter_veg">Vegetarian</string>
+    <string name="filter_high_protein">High Protein</string>
+    <string name="btn_view_recipe">View Recipe →</string>
+    
+    <!-- Recipe Details -->
+    <string name="tab_overview">Overview</string>
+    <string name="tab_ingredients">Ingredients</string>
+    <string name="tab_instructions">Instructions</string>
+    <string name="tab_nutrition">Nutrition</string>
+    <string name="btn_start_cooking">Start Cooking Mode 👨‍🍳</string>
+    <string name="btn_add_missing">Add missing ingredients to Shopping List</string>
+    <string name="servings_format">%d servings</string>
+    <string name="mins_format">%d mins</string>
+    
+    <!-- Cooking Mode -->
+    <string name="cooking_mode_title">Cooking Assistant</string>
+    <string name="step_format">STEP %1$d / %2$d</string>
+    <string name="btn_previous">Previous</string>
+    <string name="btn_next_step">Next Step</string>
+    <string name="btn_finish_cooking">Finish Cooking 🎉</string>
+    
+    <!-- Favorites Screen -->
+    <string name="favorites_title">My Favorites ❤️</string>
+    <string name="no_favorites_title">No favorite recipes yet</string>
+    <string name="no_favorites_subtitle">Tap the heart icon on any recipe to save it here for quick access later.</string>
+    <string name="btn_explore_recipes">Explore Recipes</string>
+    
+    <!-- Profile Screen -->
+    <string name="user_name">Chef Alex</string>
+    <string name="user_tagline">Food Enthusiast &amp; Home Cook</string>
+    <string name="setting_notifications">Notifications</string>
+    <string name="setting_dark_mode">Dark Mode</string>
+    <string name="setting_favorites">My Favorites</string>
+    <string name="setting_shopping_list">Shopping List</string>
+    <string name="setting_about">About SmartChef AI</string>
+</resources>

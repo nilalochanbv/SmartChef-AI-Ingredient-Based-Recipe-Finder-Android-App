@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Palette -->
+    <color name="primary_orange">#FF6B35</color>
+    <color name="primary_orange_dark">#E85520</color>
+    <color name="primary_orange_light">#FFF0E8</color>
+    
+    <!-- Accent & Highlights -->
+    <color name="tomato_red">#E63946</color>
+    <color name="tomato_red_light">#FDEAEA</color>
+    <color name="gold_star">#FFB703</color>
+    <color name="match_green">#2A9D8F</color>
+    <color name="match_green_light">#E6F5F3</color>
+    
+    <!-- Backgrounds & Surfaces -->
+    <color name="bg_cream">#FFFDF7</color>
+    <color name="bg_cream_secondary">#F9F5EE</color>
+    <color name="card_surface">#FFFFFF</color>
+    <color name="card_border">#EFE8E1</color>
+    <color name="chip_unselected">#F4EFEA</color>
+    
+    <!-- Typography -->
+    <color name="text_primary">#1A1A1A</color>
+    <color name="text_secondary">#756A63</color>
+    <color name="text_muted">#9E938C</color>
+    <color name="text_white">#FFFFFF</color>
+    
+    <!-- Dark Cooking Mode Palette -->
+    <color name="cooking_bg">#121212</color>
+    <color name="cooking_surface">#1E1E1E</color>
+    <color name="cooking_text">#F5F5F5</color>
+    <color name="cooking_orange">#FF7A00</color>
+    
+    <!-- Standard Material Colors -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+</resources>

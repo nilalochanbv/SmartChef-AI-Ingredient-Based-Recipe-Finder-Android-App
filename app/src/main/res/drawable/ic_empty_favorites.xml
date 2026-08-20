@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="140dp"
+    android:height="140dp"
+    android:viewportWidth="140"
+    android:viewportHeight="140">
+    
+    <!-- Outer Plate Shadow -->
+    <path
+        android:fillColor="#F4EFEA"
+        android:pathData="M70,25 A50,50 0 1,1 69.9,25 Z"/>
+
+    <!-- Outer Plate Rim -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#EFE8E1"
+        android:strokeWidth="4"
+        android:pathData="M70,30 A45,45 0 1,1 69.9,30 Z"/>
+
+    <!-- Inner Plate Rim -->
+    <path
+        android:fillColor="#FFFDF7"
+        android:strokeColor="#FF6B35"
+        android:strokeWidth="2"
+        android:strokeDasharray="4,4"
+        android:pathData="M70,45 A30,30 0 1,1 69.9,45 Z"/>
+
+    <!-- Floating Heart Above Plate -->
+    <path
+        android:fillColor="#E63946"
+        android:pathData="M70,72 C60,60 48,70 58,82 L70,94 L82,82 C92,70 80,60 70,72 Z"/>
+        
+    <!-- Sparkles -->
+    <path
+        android:fillColor="#FFB703"
+        android:pathData="M98,42 Q98,47 103,47 Q98,47 98,52 Q98,47 93,47 Q98,47 98,42 Z"/>
+</vector>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="12dp">
+
+    <TextView
+        android:id="@+id/tv_status_icon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:background="@drawable/bg_match_badge"
+        android:gravity="center"
+        android:text="✓"
+        android:textColor="@color/match_green"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_ingredient_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chicken"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_ingredient_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="500g"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_availability_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_match_badge"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="4dp"
+        android:text="Available"
+        android:textColor="@color/match_green"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+</LinearLayout>

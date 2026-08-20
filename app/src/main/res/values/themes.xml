@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.SmartChef" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Primary Brand Colors -->
+        <item name="colorPrimary">@color/primary_orange</item>
+        <item name="colorPrimaryVariant">@color/primary_orange_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <!-- Secondary / Accent -->
+        <item name="colorSecondary">@color/tomato_red</item>
+        <item name="colorOnSecondary">@color/white</item>
+        
+        <!-- Background and Surface -->
+        <item name="android:windowBackground">@color/bg_cream</item>
+        <item name="colorSurface">@color/card_surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        
+        <!-- Status Bar -->
+        <item name="android:statusBarColor">@color/bg_cream</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+    
+    <style name="Theme.SmartChef.Splash" parent="Theme.SmartChef">
+        <item name="android:windowBackground">@color/bg_cream</item>
+        <item name="android:statusBarColor">@color/bg_cream</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.SmartChef.Cooking" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/primary_orange</item>
+        <item name="android:windowBackground">@color/cooking_bg</item>
+        <item name="colorSurface">@color/cooking_surface</item>
+        <item name="android:statusBarColor">@color/cooking_bg</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>
