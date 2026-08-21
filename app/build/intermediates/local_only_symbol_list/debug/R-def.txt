@@ -249,3 +249,4 @@ string what_to_cook
 style Theme.SmartChef
 style Theme.SmartChef.Cooking
 style Theme.SmartChef.Splash
+xml file_paths

@@ -1,0 +1,11 @@
+{
+  "versionCode": 2,
+  "versionName": "1.1.0",
+  "apkUrl": "https://github.com/nilalochanbv/SmartChef-AI-Ingredient-Based-Recipe-Finder-Android-App/releases/download/v1.1.0/app-debug.apk",
+  "forceUpdate": false,
+  "releaseNotes": [
+    "Added custom in-app update system",
+    "Improved kitchen ingredient matching",
+    "Enhanced UI animations and speed"
+  ]
+}

@@ -64,40 +64,40 @@
         "source": "C:\\Users\\Nilalochan BV\\.gradle\\daemon\\8.11\\com.example.smartchef.app-main-39:\\anim\\slide_out_left.xml"
     },
     {
-        "merged": "C:\\Users\\Nilalochan BV\\.gradle\\daemon\\8.11\\com.example.smartchef.app-merged_res-37:\\drawable_ic_utensils.xml.flat",
-        "source": "C:\\Users\\Nilalochan BV\\.gradle\\daemon\\8.11\\com.example.smartchef.app-main-39:\\drawable\\ic_utensils.xml"
+        "merged": "C:\\Users\\Nilalochan BV\\.gradle\\daemon\\8.11\\com.example.smartchef.app-merged_res-37:\\layout_item_basket_ingredient.xml.flat",
+        "source": "C:\\Users\\Nilalochan BV\\.gradle\\daemon\\8.11\\com.example.smartchef.app-main-39:\\layout\\item_basket_ingredient.xml"
     },
     {
         "merged": "C:\\Users\\Nilalochan BV\\.gradle\\daemon\\8.11\\com.example.smartchef.app-merged_res-37:\\drawable_ic_heart_outline.xml.flat",
         "source": "C:\\Users\\Nilalochan BV\\.gradle\\daemon\\8.11\\com.example.smartchef.app-main-39:\\drawable\\ic_heart_outline.xml"
     },
     {
-        "merged": "C:\\Users\\Nilalochan BV\\.gradle\\daemon\\8.11\\com.example.smartchef.app-merged_res-37:\\layout_item_basket_ingredient.xml.flat",
-        "source": "C:\\Users\\Nilalochan BV\\.gradle\\daemon\\8.11\\com.example.smartchef.app-main-39:\\layout\\item_basket_ingredient.xml"
+        "merged": "C:\\Users\\Nilalochan BV\\.gradle\\daemon\\8.11\\com.example.smartchef.app-merged_res-37:\\drawable_ic_utensils.xml.flat",
+        "source": "C:\\Users\\Nilalochan BV\\.gradle\\daemon\\8.11\\com.example.smartchef.app-main-39:\\drawable\\ic_utensils.xml"
     },
     {
         "merged": "C:\\Users\\Nilalochan BV\\.gradle\\daemon\\8.11\\com.example.smartchef.app-merged_res-37:\\layout_fragment_profile.xml.flat",
         "source": "C:\\Users\\Nilalochan BV\\.gradle\\daemon\\8.11\\com.example.smartchef.app-main-39:\\layout\\fragment_profile.xml"
     },
     {
-        "merged": "C:\\Users\\Nilalochan BV\\.gradle\\daemon\\8.11\\com.example.smartchef.app-merged_res-37:\\drawable_bg_pill_indicator.xml.flat",
-        "source": "C:\\Users\\Nilalochan BV\\.gradle\\daemon\\8.11\\com.example.smartchef.app-main-39:\\drawable\\bg_pill_indicator.xml"
+        "merged": "com.example.smartchef.app-merged_res-37:/xml_file_paths.xml.flat",
+        "source": "com.example.smartchef.app-main-39:/xml/file_paths.xml"
     },
     {
-        "merged": "com.example.smartchef.app-merged_res-37:/layout_fragment_ingredients.xml.flat",
-        "source": "com.example.smartchef.app-main-39:/layout/fragment_ingredients.xml"
+        "merged": "C:\\Users\\Nilalochan BV\\.gradle\\daemon\\8.11\\com.example.smartchef.app-merged_res-37:\\drawable_bg_pill_indicator.xml.flat",
+        "source": "C:\\Users\\Nilalochan BV\\.gradle\\daemon\\8.11\\com.example.smartchef.app-main-39:\\drawable\\bg_pill_indicator.xml"
     },
     {
         "merged": "C:\\Users\\Nilalochan BV\\.gradle\\daemon\\8.11\\com.example.smartchef.app-merged_res-37:\\layout_fragment_search.xml.flat",
         "source": "C:\\Users\\Nilalochan BV\\.gradle\\daemon\\8.11\\com.example.smartchef.app-main-39:\\layout\\fragment_search.xml"
     },
     {
-        "merged": "C:\\Users\\Nilalochan BV\\.gradle\\daemon\\8.11\\com.example.smartchef.app-merged_res-37:\\layout_item_instruction_step.xml.flat",
-        "source": "C:\\Users\\Nilalochan BV\\.gradle\\daemon\\8.11\\com.example.smartchef.app-main-39:\\layout\\item_instruction_step.xml"
-    },
-    {
         "merged": "C:\\Users\\Nilalochan BV\\.gradle\\daemon\\8.11\\com.example.smartchef.app-merged_res-37:\\layout_fragment_ingredients.xml.flat",
         "source": "C:\\Users\\Nilalochan BV\\.gradle\\daemon\\8.11\\com.example.smartchef.app-main-39:\\layout\\fragment_ingredients.xml"
+    },
+    {
+        "merged": "C:\\Users\\Nilalochan BV\\.gradle\\daemon\\8.11\\com.example.smartchef.app-merged_res-37:\\layout_item_instruction_step.xml.flat",
+        "source": "C:\\Users\\Nilalochan BV\\.gradle\\daemon\\8.11\\com.example.smartchef.app-main-39:\\layout\\item_instruction_step.xml"
     },
     {
         "merged": "C:\\Users\\Nilalochan BV\\.gradle\\daemon\\8.11\\com.example.smartchef.app-merged_res-37:\\layout_activity_recipe_results.xml.flat",

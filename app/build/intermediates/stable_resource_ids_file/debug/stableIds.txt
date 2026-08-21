@@ -1,3 +1,4 @@
+com.example.smartchef:xml/file_paths = 0x7f120000
 com.example.smartchef:styleable/include = 0x7f110099
 com.example.smartchef:styleable/ViewTransition = 0x7f110098
 com.example.smartchef:styleable/ViewStubCompat = 0x7f110097
