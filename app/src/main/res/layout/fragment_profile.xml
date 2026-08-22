@@ -184,6 +184,40 @@
                     android:layout_height="1dp"
                     android:background="@color/card_border" />
 
+                <!-- Check for Updates -->
+                <RelativeLayout
+                    android:id="@+id/btn_setting_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Check for Updates"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_update_version"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:text="v1.0.0 ›"
+                        android:textColor="@color/brand_orange"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/card_border" />
+
                 <!-- About SmartChef AI -->
                 <RelativeLayout
                     android:id="@+id/btn_setting_about"
@@ -206,7 +240,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
-                        android:text="v1.0 ›"
+                        android:text="v1.0.0 ›"
                         android:textColor="@color/text_secondary"
                         android:textSize="14sp" />
                 </RelativeLayout>

@@ -35,4 +35,16 @@
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
     <color name="transparent">#00000000</color>
+
+    <!-- Redesigned Splash Screen Palette -->
+    <color name="brand_orange">#FF6B00</color>
+    <color name="brand_orange_light">#FFA629</color>
+    <color name="brand_orange_dark">#E05A00</color>
+    <color name="bg_cream_start">#FFF4E6</color>
+    <color name="bg_cream_end">#FFE7C2</color>
+    <color name="pot_dark">#2D2D2D</color>
+    <color name="leaf_green">#4CAF50</color>
+    <color name="chili_red">#D32F2F</color>
+    <color name="onion_purple">#B15B9A</color>
+    <color name="progress_track_bg">#FFE0B2</color>
 </resources>

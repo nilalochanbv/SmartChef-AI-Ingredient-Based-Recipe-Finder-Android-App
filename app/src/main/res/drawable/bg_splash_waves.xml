@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="180dp"
+    android:viewportWidth="360"
+    android:viewportHeight="180">
+
+    <!-- Back Wave Layer (Lighter Orange) -->
+    <path
+        android:fillColor="#FFA629"
+        android:pathData="M0,60 Q90,20 180,60 T360,40 L360,180 L0,180 Z" />
+
+    <!-- Front Wave Layer (Vibrant Primary Orange) -->
+    <path
+        android:fillColor="#FF6B00"
+        android:pathData="M0,80 Q90,110 180,70 T360,90 L360,180 L0,180 Z" />
+
+    <!-- Soft Overlay Wave Highlight -->
+    <path
+        android:fillColor="#20FFFFFF"
+        android:pathData="M0,80 Q90,110 180,70 T360,90 L360,105 Q270,85 180,85 T0,95 Z" />
+</vector>

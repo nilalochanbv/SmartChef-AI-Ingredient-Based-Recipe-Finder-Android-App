@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+
+    <!-- Tomato Body Base -->
+    <path
+        android:fillColor="#E63946"
+        android:pathData="M32,16 C46,16 56,24 56,38 C56,52 44,58 32,58 C20,58 8,52 8,38 C8,24 18,16 32,16 Z" />
+
+    <!-- Tomato Highlight Glow -->
+    <path
+        android:fillColor="#FF7B88"
+        android:pathData="M22,22 C28,19 36,19 40,22 C34,20 26,21 22,26 C20,24 20,23 22,22 Z" />
+
+    <!-- Green Calyx / Leaves on Top -->
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M32,18 C28,10 20,12 24,18 C18,16 16,22 22,22 C18,26 24,28 32,21 C40,28 46,26 42,22 C48,22 46,16 40,18 C44,10 36,10 32,18 Z" />
+
+    <!-- Stem -->
+    <path
+        android:fillColor="#388E3C"
+        android:pathData="M31,6 L33,6 L34,16 L30,16 Z" />
+</vector>

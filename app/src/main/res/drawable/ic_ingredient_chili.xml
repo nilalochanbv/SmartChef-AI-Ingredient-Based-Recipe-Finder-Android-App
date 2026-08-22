@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+
+    <!-- Red Curved Chili Pepper -->
+    <path
+        android:fillColor="#D32F2F"
+        android:pathData="M18,12 Q28,24 38,40 Q44,50 48,58 Q38,58 30,48 Q22,36 12,20 Z" />
+
+    <!-- Chili Highlight Glow -->
+    <path
+        android:fillColor="#FF6666"
+        android:pathData="M18,16 Q26,26 34,40 Q28,30 20,20 Z" />
+
+    <!-- Green Stem -->
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M12,20 Q10,12 6,8 Q12,8 18,14 Z" />
+</vector>

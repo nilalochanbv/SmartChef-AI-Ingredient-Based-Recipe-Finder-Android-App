@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Soft Outer Background Circular Ring Glow -->
+    <path
+        android:fillColor="#15FF6B00"
+        android:pathData="M100,10 A90,90 0 1,1 99.9,10 Z" />
+
+    <!-- Dashed Ring Outline Accent -->
+    <path
+        android:strokeColor="#40FF6B00"
+        android:strokeWidth="2"
+        android:pathData="M100,20 A80,80 0 1,1 99.9,20 Z" />
+
+    <!-- Wooden Spoon (sticking out top-right behind pot, in front of hat) -->
+    <path
+        android:fillColor="#FFA629"
+        android:pathData="M132,85 C145,65 158,62 165,72 C170,80 158,92 142,95 Z" />
+    <path
+        android:fillColor="#E08B18"
+        android:pathData="M136,88 L148,115 L140,118 L130,93 Z" />
+
+    <!-- CHEF HAT (Top) -->
+    <!-- Chef Hat White Cloud Puff -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#FF6B00"
+        android:strokeWidth="3"
+        android:pathData="M70,82 C55,75 52,54 68,42 C67,26 88,18 100,28 C112,18 133,26 132,42 C148,54 145,75 130,82 Z" />
+    <!-- Chef Hat Puff Highlights / Details -->
+    <path
+        android:strokeColor="#FFD8B3"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M78,48 C75,38 88,30 96,35" />
+    <path
+        android:strokeColor="#FFD8B3"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M105,35 C115,30 125,38 122,48" />
+
+    <!-- Chef Hat Base Band -->
+    <path
+        android:fillColor="#FF6B00"
+        android:pathData="M70,78 L130,78 A4,4 0 0,1 134,82 L134,88 A4,4 0 0,1 130,92 L70,92 A4,4 0 0,1 66,88 L66,82 A4,4 0 0,1 70,78 Z" />
+
+    <!-- COOKING POT (Bottom Unit) -->
+    <!-- Side Handles -->
+    <path
+        android:fillColor="#2D2D2D"
+        android:pathData="M52,118 C42,118 42,132 52,132 Z" />
+    <path
+        android:fillColor="#2D2D2D"
+        android:pathData="M148,118 C158,118 158,132 148,132 Z" />
+
+    <!-- Main Pot Body -->
+    <path
+        android:fillColor="#2D2D2D"
+        android:pathData="M60,110 L140,110 A6,6 0 0,1 146,116 L140,152 C136,166 120,172 100,172 C80,172 64,166 60,152 L54,116 A6,6 0 0,1 60,110 Z" />
+
+    <!-- Pot Top Lip / Rim -->
+    <path
+        android:fillColor="#3A3A3A"
+        android:pathData="M56,106 L144,106 A4,4 0 0,1 148,110 L148,112 A4,4 0 0,1 144,116 L56,116 A4,4 0 0,1 52,112 L52,110 A4,4 0 0,1 56,106 Z" />
+
+    <!-- CUTE FACE ON POT -->
+    <!-- Left Eye (Winking ^) -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M78,132 L84,126 L90,132" />
+
+    <!-- Right Eye (Closed/Happy Arc ^) -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M110,132 L116,126 L122,132" />
+
+    <!-- Cute Smiling Mouth (‿) -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:pathData="M95,142 Q100,149 105,142" />
+
+    <!-- Rosy Cheek Blushes -->
+    <path
+        android:fillColor="#40FF6B00"
+        android:pathData="M72,138 A4,3 0 1,1 71.9,138 Z" />
+    <path
+        android:fillColor="#40FF6B00"
+        android:pathData="M128,138 A4,3 0 1,1 127.9,138 Z" />
+</vector>

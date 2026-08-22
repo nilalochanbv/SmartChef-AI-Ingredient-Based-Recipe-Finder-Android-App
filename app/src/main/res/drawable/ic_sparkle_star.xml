@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+
+    <!-- 4-Point Golden Sparkle Star -->
+    <path
+        android:fillColor="#FFA629"
+        android:pathData="M16,2 Q16,16 30,16 Q16,16 16,30 Q16,16 2,16 Q16,16 16,2 Z" />
+</vector>

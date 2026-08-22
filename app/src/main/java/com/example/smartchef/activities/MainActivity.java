@@ -11,6 +11,7 @@ import com.example.smartchef.fragments.HomeFragment;
 import com.example.smartchef.fragments.IngredientsFragment;
 import com.example.smartchef.fragments.ProfileFragment;
 import com.example.smartchef.fragments.SearchFragment;
+import com.example.smartchef.update.UpdateManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -51,6 +52,12 @@ public class MainActivity extends AppCompatActivity {
             }
             return false;
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        UpdateManager.getInstance().resumePendingUpdateIfAny(this);
     }
 
     public void switchToTab(int navItemId) {

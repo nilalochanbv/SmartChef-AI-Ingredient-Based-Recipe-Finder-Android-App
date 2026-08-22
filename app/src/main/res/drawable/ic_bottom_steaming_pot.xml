@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="140dp"
+    android:height="100dp"
+    android:viewportWidth="140"
+    android:viewportHeight="100">
+
+    <!-- Bottom Pot Glow Base -->
+    <path
+        android:fillColor="#33FFA629"
+        android:pathData="M20,40 A50,20 0 1,0 120,40 Z" />
+
+    <!-- Pot Side Handles -->
+    <path
+        android:fillColor="#E05A00"
+        android:pathData="M16,42 C6,42 6,56 16,56 Z" />
+    <path
+        android:fillColor="#E05A00"
+        android:pathData="M124,42 C134,42 134,56 124,56 Z" />
+
+    <!-- Main Pot Body (Warm Glowing Orange) -->
+    <path
+        android:fillColor="#FF6B00"
+        android:pathData="M24,35 L116,35 A6,6 0 0,1 122,41 L116,75 C112,88 96,95 70,95 C44,95 28,88 24,75 L18,41 A6,6 0 0,1 24,35 Z" />
+
+    <!-- Pot Top Lid/Rim -->
+    <path
+        android:fillColor="#FFA629"
+        android:pathData="M20,30 L120,30 A4,4 0 0,1 124,34 L124,36 A4,4 0 0,1 120,40 L20,40 A4,4 0 0,1 16,36 L16,34 A4,4 0 0,1 20,30 Z" />
+
+    <!-- Lid Knob -->
+    <path
+        android:fillColor="#FFD8B3"
+        android:pathData="M62,22 L78,22 A4,4 0 0,1 82,26 L82,30 L58,30 L58,26 A4,4 0 0,1 62,22 Z" />
+
+    <!-- Pot Front Highlight Curve -->
+    <path
+        android:fillColor="#33FFFFFF"
+        android:pathData="M34,46 C45,58 95,58 106,46 C95,54 45,54 34,46 Z" />
+</vector>

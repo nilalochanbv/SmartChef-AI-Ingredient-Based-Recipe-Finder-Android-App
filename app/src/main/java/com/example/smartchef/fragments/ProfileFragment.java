@@ -14,14 +14,16 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import com.example.smartchef.R;
+import com.example.smartchef.update.UpdateInfo;
+import com.example.smartchef.update.UpdateManager;
 import com.example.smartchef.utils.ShoppingListManager;
 
 import java.util.Set;
 
 public class ProfileFragment extends Fragment {
 
-    private RelativeLayout btnShopping, btnAbout;
-    private TextView tvShoppingCount;
+    private RelativeLayout btnShopping, btnUpdate, btnAbout;
+    private TextView tvShoppingCount, tvUpdateVersion;
 
     @Nullable
     @Override
@@ -29,8 +31,15 @@ public class ProfileFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
         btnShopping = view.findViewById(R.id.btn_setting_shopping);
+        btnUpdate = view.findViewById(R.id.btn_setting_update);
         btnAbout = view.findViewById(R.id.btn_setting_about);
         tvShoppingCount = view.findViewById(R.id.tv_shopping_count);
+        tvUpdateVersion = view.findViewById(R.id.tv_update_version);
+
+        if (getContext() != null) {
+            String currentVersion = UpdateManager.getInstance().getInstalledVersionName(requireContext());
+            tvUpdateVersion.setText("v" + currentVersion + " ›");
+        }
 
         updateShoppingCount();
 
@@ -47,15 +56,46 @@ public class ProfileFragment extends Fragment {
             }
         });
 
+        btnUpdate.setOnClickListener(v -> checkAppUpdateManually());
+
         btnAbout.setOnClickListener(v -> {
+            String version = getContext() != null ? UpdateManager.getInstance().getInstalledVersionName(requireContext()) : "1.0.0";
             new AlertDialog.Builder(requireContext())
                     .setTitle("About SmartChef AI")
-                    .setMessage("SmartChef AI v1.0\n\n\"Cook smarter with what you already have.\"\n\nBuilt with native Android Java & Material Design 3 for premium food discovery.")
+                    .setMessage("SmartChef AI v" + version + "\n\n\"Cook smarter with what you already have.\"\n\nBuilt with native Android Java & Material Design 3 for premium food discovery.")
                     .setPositiveButton("Awesome!", null)
                     .show();
         });
 
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (getActivity() != null) {
+            UpdateManager.getInstance().resumePendingUpdateIfAny(getActivity());
+        }
+    }
+
+    private void checkAppUpdateManually() {
+        if (getContext() == null || getActivity() == null) return;
+
+        Toast.makeText(getContext(), "Checking for updates...", Toast.LENGTH_SHORT).show();
+
+        UpdateManager.getInstance().checkForUpdate(requireContext(), new UpdateManager.OnUpdateCheckListener() {
+            @Override
+            public void onUpdateAvailable(UpdateInfo updateInfo) {
+                if (getActivity() == null || getActivity().isFinishing()) return;
+                UpdateManager.getInstance().showUpdateDialog(getActivity(), updateInfo, null);
+            }
+
+            @Override
+            public void onNoUpdateAvailable() {
+                if (getContext() == null) return;
+                Toast.makeText(getContext(), "You are already using the latest version of SmartChef AI!", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     private void updateShoppingCount() {

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="20dp"
+    android:viewportWidth="120"
+    android:viewportHeight="20">
+
+    <!-- Left Horizontal Line -->
+    <path
+        android:strokeColor="#FFA629"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M10,10 L48,10" />
+
+    <!-- Center Chef Hat Icon -->
+    <path
+        android:fillColor="#FF6B00"
+        android:pathData="M56,12 C53,10 52,7 56,5 C56,3 60,2 62,3 C64,2 68,3 68,5 C72,7 71,10 68,12 Z" />
+    <path
+        android:fillColor="#FF6B00"
+        android:pathData="M56,12 L68,12 L68,15 L56,15 Z" />
+
+    <!-- Right Horizontal Line -->
+    <path
+        android:strokeColor="#FFA629"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M72,10 L110,10" />
+</vector>
